@@ -151,8 +151,6 @@ var populateCards = function(cardData) {
   cardList = shuffleFilteredResults(cardList, cardList.length);
 
   // Then append list to the dom
-  console.log(cardList);
-
   for (var i=0; i < cardList.length; i++) {
     $('#card-container').append(cardList[i]);
 
@@ -163,7 +161,7 @@ var populateCards = function(cardData) {
       // Create flip event
       var currentMediaCard = "#media-card-" + i;
       var currentWordCard = "#word-card-" + i;
-      console.log(currentMediaCard + "   " + currentWordCard);
+
       $(currentMediaCard).flip({ axis: 'y', trigger: 'click' });
       $(currentWordCard).flip({ axis: 'y', trigger: 'click' });
     }

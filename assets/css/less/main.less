@@ -1,13 +1,37 @@
 @import "variables";
 
+html { height: 100%; }
+
 body {
+  height: 100%;
   font-family: 'Montserrat', sans-serif;
   background: @lightest-color;
   color: @darkest-color;
+  .site-container, #nav-bar, .nav-col, .body-col { height: 100%; }
   #nav-bar {
-    text-align: center;
+    background-color: @light-color;
+    border-right: 1px solid @medium-color;
+    padding: 0 1.5em;
+    .nav-title {
+      padding-top: 1em;
+      font-size: 2em;
+      font-weight: bold;
+    }
     button {
-      margin: 1em;
+      width: 100%;
+      background: none;
+      border: none;
+      text-align: left;
+      font-size: 1.2em;
+      padding: 0;
+      outline: none;
+      color: @dark-color;
+      &:hover { color: @medium-color; }
+    }
+    @media(max-width: 500px) {
+      padding: 0 0.5em;
+      .nav-title { font-size: 1.25em; }
+      button { font-size: 0.9em; }
     }
   }
 }

@@ -27,16 +27,19 @@
       <p class="browserupgrade">This site will not display properly in your current browser. Please <a href="http://browsehappy.com/?locale=en">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
 
-    <div id="header"></div> <!-- /header -->
+    <div id="header"><i class="fa fa-bars" onclick="toggleNavigation()"></i></div> <!-- /header -->
 
-    <div id="nav-bar"><button class='btn btn-default' onclick="goToView('#search-container')">ASL Dictionary</button><button class='btn btn-default' onclick="goToView('#match-game')">Play Match!</button></div>
+    <div class="row site-container">
+      <div class="col-xs-4 col-sm-3 col-md-2 nav-col">
+        <div id="nav-bar"><p class="nav-title">LEARN</p><button onclick="goToView('#search-container')">Dictionary</button><p class="nav-title">PLAY</p><button onclick="goToView('#match-game')">Match</button></div>
+      </div>
 
-    <div id="match-game"><div id="game-status"></div><div id="card-container" class="row"></div></div>
-
-    <div id="footer"></div>
-
-    <div id="search-container"><div id="search-example"></div><input id="search-box"></input><div id="search-results"></div></div>
-
+      <div class="col-xs-8 col-sm-9 col-md-10 body-col">
+        <div id="match-game"><div id="game-status"></div><div id="card-container" class="row"></div></div>
+        <div id="footer"></div>
+        <div id="search-container"><div id="search-example"></div><input id="search-box"></input><div id="search-results"></div></div>
+      </div>
+    </div>
 
     <!-- External JS -->
     <script src="assets/js/external/jquery-2.1.4.min.js"></script>

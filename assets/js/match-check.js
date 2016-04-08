@@ -12,7 +12,7 @@ var getCardNumber = function(id) {
 
 var gameOver = function() {
   $('#game-status').html("<p>Congratulations! You have found all of the matches!</p>" +
-  "<button class='btn btn-default' id='play-again-btn' onclick='playAgain()'>Play again</button>")
+  "<button class='btn btn-default' id='play-again-btn' onclick='resetMatchGame()'>Play again</button>")
 };
 
 var notAMatch = function() {
@@ -60,12 +60,7 @@ var checkMatch = function() {
 var attachCardEventBindings = function() {
   $('.card').bind('click', function(){
     lastClickedCard = getCardNumber($(this).attr('id'));
-    console.log(lastClickedCard);
     $('#game-status').html('');
     checkMatch();
   });
-};
-
-var playAgain = function() {
-  location.reload();
 };
