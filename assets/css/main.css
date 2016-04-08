@@ -74,6 +74,8 @@
 
 body {
   font-family: 'Montserrat', sans-serif;
+  background: rgba(176, 229, 236, 0.5);
+  color: #002126;
 }
 body #nav-bar {
   text-align: center;
@@ -111,3 +113,4 @@ body #nav-bar button {
   background: rgba(146, 195, 242, 0.8);
   font-weight: bold;
 }
+
