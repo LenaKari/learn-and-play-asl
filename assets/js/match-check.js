@@ -20,6 +20,7 @@ var notAMatch = function() {
   lastClickedCard = "";
   $('.card').flip(false);
   $('#game-status').html("That was not a match.");
+  $('.page-overlay').hide();
 };
 
 var isAMatch = function() {
@@ -32,7 +33,7 @@ var isAMatch = function() {
   currentlySelectedSet = "";
   lastClickedCard = "";
   $('#game-status').html("You have a match!");
-
+  $('.page-overlay').hide();
   matchesCountdown--;
 
   if(matchesCountdown === 0) {
@@ -42,6 +43,9 @@ var isAMatch = function() {
 };
 
 var checkMatch = function() {
+  // Overlay transparent div so user cannot select another card while check is happening
+  $('.page-overlay').show();
+
   // Check if a set has already been selected
   if(currentlySelectedSet === parseInt(currentlySelectedSet, 10)) {
     setTimeout(function() {
@@ -53,6 +57,7 @@ var checkMatch = function() {
     }, 2500);
   } else {
     currentlySelectedSet = lastClickedCard;
+    $('.page-overlay').hide();
   }
 };
 

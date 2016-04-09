@@ -60,10 +60,14 @@
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  font-size: 4em;
 }
 #match-game #card-container .back {
   border: 1px solid black;
   height: 100%;
+}
+#match-game #card-container .word-card .back {
+  padding: 2.25em 0;
 }
 @media (max-width: 770px) {
   #match-game .media-card,
@@ -77,6 +81,7 @@
   background: #0497ac;
   padding: 0.75em 1.5em;
   border-bottom: 1px solid #02616e;
+  box-shadow: 0px 1px 5px 0px #02616e;
 }
 #header i {
   font-size: 2em;
@@ -102,15 +107,25 @@ body .nav-col,
 body .body-col {
   height: 100%;
 }
+body .page-overlay {
+  z-index: 10;
+  position: absolute;
+  opacity: 0.5;
+  height: 100%;
+  width: 100%;
+  display: none;
+}
 body #nav-bar {
   background-color: rgba(65, 176, 191, 0.7);
   border-right: 1px solid #0497ac;
   padding: 0 1.5em;
+  box-shadow: 2px 0px 5px 0px #0497ac;
 }
 body #nav-bar .nav-title {
   padding-top: 1em;
   font-size: 2em;
   font-weight: bold;
+  margin-bottom: 0;
 }
 body #nav-bar button {
   width: 100%;
@@ -156,6 +171,7 @@ body #nav-bar button:hover {
   width: 75%;
   padding: 0.5em;
   font-size: 1.5em;
+  box-shadow: 0px 1px 5px 1px #02616e;
 }
 #search-container #search-results {
   margin: auto;

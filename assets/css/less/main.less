@@ -8,14 +8,24 @@ body {
   background: @lightest-color;
   color: @darkest-color;
   .site-container, #nav-bar, .nav-col, .body-col { height: 100%; }
+  .page-overlay {
+    z-index: 10;
+    position: absolute;
+    opacity: 0.5;
+    height: 100%;
+    width: 100%;
+    display: none;
+  }
   #nav-bar {
     background-color: @light-color;
     border-right: 1px solid @medium-color;
     padding: 0 1.5em;
+    box-shadow: 2px 0px 5px 0px @medium-color;
     .nav-title {
       padding-top: 1em;
       font-size: 2em;
       font-weight: bold;
+      margin-bottom: 0;
     }
     button {
       width: 100%;

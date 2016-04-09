@@ -154,6 +154,9 @@ var populateCards = function(cardData) {
   for (var i=0; i < cardList.length; i++) {
     $('#card-container').append(cardList[i]);
 
+    // Do we want to add numbers to the cards? If so, uncomment!
+    // var currentCard = $('.card .front')[i];
+    // currentCard.innerHTML = (i+1).toString();
   }
 
   setTimeout(function() {
