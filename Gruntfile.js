@@ -64,7 +64,7 @@ module.exports = function(grunt) {
     jasmine: {
       src: ['assets/js/external/jquery-2.1.4.min.js', 'assets/js/*.js', '!assets/js/flip.js'],
       options: {
-        specs: 'specs/*.js',
+        specs: 'specs/*.spec.js',
       }
     },
     watch: {
