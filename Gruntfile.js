@@ -61,6 +61,12 @@ module.exports = function(grunt) {
         ]
       },
     },
+    jasmine: {
+      src: ['assets/js/external/jquery-2.1.4.min.js', 'assets/js/*.js', '!assets/js/flip.js'],
+      options: {
+        specs: 'specs/*.js',
+      }
+    },
     watch: {
       options: {
         livereload: true
@@ -90,9 +96,11 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-mustache');
   grunt.loadNpmTasks('grunt-mustache-render');
   grunt.loadNpmTasks('grunt-contrib-concat');
+  grunt.loadNpmTasks('grunt-contrib-jasmine');
 
 
   grunt.registerTask('default', ['jshint']);
+  grunt.registerTask('test', ['jasmine']);
   grunt.registerTask('dev', ['less', 'mustache', 'concat', 'mustache_render']);
   grunt.registerTask('dev-watch', ['less', 'mustache', 'concat', 'mustache_render', 'watch']);
 
